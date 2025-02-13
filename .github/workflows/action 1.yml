@@ -7,7 +7,10 @@ jobs:
         runs-on: ubuntu-latest 
         steps:
         - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
         - name: My first action
         run: echo "Hello, World!"
+
+        - name: List all files
+        run: ls
