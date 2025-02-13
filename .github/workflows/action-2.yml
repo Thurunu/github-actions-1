@@ -1,0 +1,13 @@
+name: action 2
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository 2
+        uses: actions/checkout@v4
+
+      - name: Ny second action
+        run: echo "Hi this is second action"
