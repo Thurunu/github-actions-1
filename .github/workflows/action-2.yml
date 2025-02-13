@@ -9,8 +9,5 @@ jobs:
       - name: Checkout Repository 2
         uses: actions/checkout@v4
 
-      - name: Second action
-        run: echo "Hi this is second action"
-
-      - name: Platform information
-        run: lscpu
+      - name: Executing shell script
+        run: ./asci-script.sh
