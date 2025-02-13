@@ -1,0 +1,30 @@
+name: Generate ASCII
+
+on: push
+
+jobs:
+  build_job_1:
+    runs_on: ubuntu-latest
+    steps:
+
+      - name: Execute cat CMD
+        run: echo "Hello World this is a sample file creation to test github actions" >> dragon.txt
+
+
+      - name: sleep for 30 seconds
+        run: sleep 30
+  
+  test_job_2:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Sleep for 10 seconds
+        run: sleep 10
+
+      - name: Check file exits
+        run: grep -i "dragon" dragon.txt
+
+  deploy_job_3:
+    runs_on: ubuntu-latest
+    steps: 
+      - name: Read file
+        run: cat dragon.txt
