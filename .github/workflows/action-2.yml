@@ -9,5 +9,8 @@ jobs:
       - name: Checkout Repository 2
         uses: actions/checkout@v4
 
-      - name: Ny second action
+      - name: Second action
         run: echo "Hi this is second action"
+
+      - name: Platform information
+        run: lscpu
